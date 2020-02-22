@@ -2,7 +2,7 @@ import os
 import csv
 import statistics
 
-bank_path= os.path.join("C:/Users/josed/Desktop/UT-TOR-DATA-PT-01-2020-U-C/03-Python/Instructions/PyBank/Resources/budget_data.csv")
+bank_path= os.path.join("./Resources/budget_data.csv")
 #bank_path= os.path.join("C:","Users","josed","Desktop","UT-TOR-DATA-PT-01-2020-U-C","03-Python","Instructions","PyBank","Resources","budget_data.csv")
 
 months=[]
@@ -30,16 +30,8 @@ with open(bank_path,newline='') as csvfile:
     max_loss = min(changes_profit)
     max_loss_month = months[changes_profit.index(max_loss)+1]
 
-    print(total_months)
-    print(net_profit_loss)
-    print(average_change)
-    print(max_profit)
-    print(max_profit_month)
-    print(max_loss)
-    print(max_loss_month)
 
-
-outpath= "Desktop/Homework/Python_Homework/PyBank/Analysis.txt"
+outpath= "./Analysis.txt"
 
 with open(outpath,'w',newline='') as text:
     print("Financial Analysis", file=text)

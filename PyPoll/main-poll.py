@@ -2,7 +2,7 @@ import os
 import csv
 import statistics
 
-vote_path= os.path.join("C:/Users/josed/Desktop/UT-TOR-DATA-PT-01-2020-U-C/03-Python/Instructions/PyPoll/Resources/election_data.csv")
+vote_path= os.path.join("./Resources/election_data.csv")
 
 voterid=[]
 counties=[]
@@ -54,7 +54,7 @@ with open(vote_path,newline='') as csvfile:
     print(f"Winner: {winner}")
     print("--------------------------")
 
-outpath= "Desktop/Homework/Python_Homework/PyPoll/Results.txt"
+outpath= "./Results.txt"
 
 with open(outpath,'w',newline='') as text:
     print("Election Results", file=text)
